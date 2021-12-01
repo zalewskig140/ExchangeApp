@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-
+import javax.swing.*;
 import java.awt.*;
 
 @Log
@@ -18,7 +18,8 @@ public class StartupRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         log.info("Executing startup actions...");
-        ExchangeRatesService.getRates();
+        exchangeRatesService.getRates();
+
 
     }
 
