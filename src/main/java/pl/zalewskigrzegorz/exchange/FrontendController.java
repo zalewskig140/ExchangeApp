@@ -41,6 +41,11 @@ public class FrontendController {
         exchangeWorkService.deleteOldTransaction();
         return "redirect:result";
     }
+    @PostMapping("/history")
+    public String clearHistory(Model model){
+        transactionRepository.deleteAll();
+       return "history" ;
+    }
 
     @GetMapping("/result")
     public String result(Model model, @ModelAttribute ExchangeOptions exchangeOptions) {
