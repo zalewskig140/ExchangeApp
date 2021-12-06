@@ -23,7 +23,7 @@ public class ExchangeRatesService {
         for (int i = 0; i < tableInfoB.getRates().size(); i++) {
             rates.add(tableInfoB.getRates().get(i));
         }
-        RateInfo pln = new RateInfo("złoty polski","PLN", 1.00f);
+        RateInfo pln = new RateInfo("złoty polski","PLN", 1.00d);
         rates.add(pln);
         List<RateInfo> sortedRates = rates.stream()
                 .sorted(Comparator.comparing(RateInfo::getCurrency))

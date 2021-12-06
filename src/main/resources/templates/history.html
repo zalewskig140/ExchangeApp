@@ -26,47 +26,40 @@
 <!-- Masthead-->
 <div class="masthead">
     <div class="masthead-content text-white">
-        <div style="text-align: center" class="container-fluid px-4 px-lg-0">
-            <h1 class="fst-italic lh-1 mb-4">Witaj w kantorze walut!</h1>
-            <p class="mb-5">Chcę wymienić:</p>
+        <div style="text-align: center" class="container-fluid px-4 px-lg-0 ">
+            <h6 class="fst-italic lh-1 mb-4" th:text="'Historia transakcji z ostatnich 7 dni'"></h6>
+            <div style="height: 600px; overflow: auto" >
+                <table class="table table-bordered table-info table-striped mb-0 table-scrollable">
+                    <thead>
+                    <tr>
 
-            <form action="#" th:action="@{/}" th:object="${exchangeOptions}" method="post">
-                <div class="form-group">
-                    <label for="exampleFormControlInput1">Ilość</label>
-                    <input type="number" class="form-control" th:field="*{quantity}" id="exampleFormControlInput1"
-                           placeholder="Ilość..." min="1">
-                </div>
+                        <th scope="col">Data</th>
+                        <th scope="col">Waluta początkowa</th>
+                        <th scope="col">Ilość</th>
+                        <th scope="col">Waluta docelowa</th>
+                    </tr>
+                    </thead>
 
-                <div class="form-group">
-                    <label for="myCurrency">Waluta</label>
-                    <select class="form-control" id="myCurrency" th:field="*{myCurrency}" >
-                        <option th:each="cur : ${currencies}"
-                                th:value="${cur.getCode()}"
-                                th:text="${cur.getCurrency()}"> cur
-                        </option>
+                    <tbody>
+                    <tr th:each="instance : ${history}">
 
-                    </select>
-                </div>
 
-                                        <p style="margin-top: 10%"  class="mb-5">Na:</p>
-                <div class="form-group">
-                    <label for="targetCurrency">Waluta</label>
-                    <select class="form-control" id="targetCurrency" th:field="*{targetCurrency}" >
-                        <option th:each="cur : ${currencies}"
-                                th:value="${cur.getCode()}"
-                                th:text="${cur.getCurrency()}"> cur
-                        </option>
+                        <td th:text="${instance.getDate()}"></td>
+                        <td th:text="${instance.getMyCurrency()}"></td>
+                        <td th:text="${instance.getAmount()}"></td>
+                        <td th:text="${instance.targetCurrency}"></td>
 
-                    </select>
-                </div>
-                <div style="text-align: center; margin-top: 8%" class="col-auto">
-                    <button class="btn btn-primary " id="submitButton" type="submit">Przelicz!</button>
-                </div>
-                <div style="text-align: center; margin-top: 8%" class="col-auto">
-                    <a href="history" class="btn btn-primary ">Historia transakcji z ostatnich 7 dni</a>
-                </div>
-            </form>
+                    </tr>
+                    </tbody>
+                </table>
 
+
+            </div>
+        </div>
+
+
+        <div style="text-align: center; margin-top: 8%" class="col-auto">
+            <a href="/" class="btn btn-primary ">Powrót do strony głównej</a>
         </div>
 
     </div>
