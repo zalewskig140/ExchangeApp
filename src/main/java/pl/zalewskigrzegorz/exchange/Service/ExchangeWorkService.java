@@ -96,7 +96,7 @@ public class ExchangeWorkService {
         return currencyName;
     }
 
-    public double calculateTheAmountOfMoney(ExchangeOptions exchangeOptions) {
+    private double calculateTheAmountOfMoney(ExchangeOptions exchangeOptions) {
         double quantity = exchangeOptions.getQuantity() * Double.parseDouble(mainRate);
         quantity = Math.round(quantity * 100);
         quantity /= 100;
@@ -104,8 +104,10 @@ public class ExchangeWorkService {
         return quantity;
 
     }
-
-    public String round(double number) {
+    //założeniem tej metody jest zaokrąglanie wyników do postaci, gdzie występuje dowolna ilośc zer i kropka,
+    //a następnie po zerach cztery cyfry.
+    //Metoda ta zapewnia również pozbycie się notacji naukowej w przypadku bardzo małych kursów walut
+    private String round(double number) {
         int index = 1;
         String n = "";
         String num = Double.toString(number);
@@ -174,6 +176,7 @@ public class ExchangeWorkService {
 
 
     }
+
 
 
 }
