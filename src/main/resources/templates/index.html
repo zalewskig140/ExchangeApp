@@ -25,10 +25,10 @@
 </video>
 <!-- Masthead-->
 <div class="masthead">
-    <div class="masthead-content text-white">
-        <div style="text-align: center" class="container-fluid px-4 px-lg-0">
+    <div class="masthead-content text-white" style="padding: 20px">
+        <div style="text-align: center; height: 450px; margin-top: 10px "  class="container-fluid px-4 px-lg-0 heigh">
             <h1 class="fst-italic lh-1 mb-4">Witaj w kantorze walut!</h1>
-            <p class="mb-5">Chcę wymienić:</p>
+            <p style="margin-bottom: 8px !important;" class="mb-5">Chcę wymienić:</p>
 
             <form action="#" th:action="@{/}" th:object="${exchangeOptions}" method="post">
                 <div class="form-group">
@@ -48,8 +48,8 @@
                     </select>
                 </div>
 
-                                        <p style="margin-top: 10%"  class="mb-5">Na:</p>
-                <div class="form-group">
+                                        <p style="margin-bottom: 8px !important; padding: 0"  class="mb-5">Na:</p>
+                <div class="form-group" style="margin-top: 3%">
                     <label for="targetCurrency">Waluta</label>
                     <select class="form-control" id="targetCurrency" th:field="*{targetCurrency}" >
                         <option th:each="cur : ${currencies}"
@@ -59,10 +59,10 @@
 
                     </select>
                 </div>
-                <div style="text-align: center; margin-top: 8%" class="col-auto">
+                <div style="text-align: center; margin-top: 1%" class="col-auto">
                     <button class="btn btn-primary " id="submitButton" type="submit">Przelicz!</button>
                 </div>
-                <div style="text-align: center; margin-top: 8%" class="col-auto">
+                <div style="text-align: center; margin-top: 1%" class="col-auto">
                     <a href="history" class="btn btn-primary ">Historia transakcji z ostatnich 7 dni</a>
                 </div>
             </form>
