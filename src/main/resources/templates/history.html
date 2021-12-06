@@ -28,7 +28,7 @@
     <div class="masthead-content text-white">
         <div style="text-align: center" class="container-fluid px-4 px-lg-0 ">
             <h6 class="fst-italic lh-1 mb-4" th:text="'Historia transakcji z ostatnich 7 dni'"></h6>
-            <div style="height: 600px; overflow: auto" >
+            <div style="height: 400px; overflow: auto" >
                 <table class="table table-bordered table-info table-striped mb-0 table-scrollable">
                     <thead>
                     <tr>
@@ -42,8 +42,6 @@
 
                     <tbody>
                     <tr th:each="instance : ${history}">
-
-
                         <td th:text="${instance.getDate()}"></td>
                         <td th:text="${instance.getMyCurrency()}"></td>
                         <td th:text="${instance.getAmount()}"></td>

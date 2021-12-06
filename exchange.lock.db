@@ -1,6 +1,6 @@
 #FileLock
-#Mon Dec 06 12:19:00 CET 2021
-server=192.168.0.102\:64409
-hostName=LAPTOP-QT10LO2E
+#Mon Dec 06 16:10:02 UTC 2021
+server=192.168.1.102\:61173
+hostName=192.168.1.102
 method=file
-id=17d8f77ea5f5dca721d5cf7aab2a89108891e972315
+id=17d90825de47c3963aa3dc26a87424072bd5e469ca5
