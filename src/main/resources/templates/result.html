@@ -29,20 +29,24 @@
         <div style="text-align: center" class="container-fluid px-4 px-lg-0">
             <h6 class="fst-italic lh-1 mb-4" th:text="'Aktualny kurs '+${myCurrency} + '(' + ${myCurrencyName} + ')'+ ' to:'"></h6>
             <h6 class="fst-italic lh-1 mb-4" th:text="${mainRate} + ' '+ ${targetCurrency}+ '(' + ${targetCurrencyName} + ')'"></h6>
-            <h6 class="fst-italic lh-1 mb-4" th:text="'Kurs '+${myCurrency} + '(' + ${myCurrencyName} + ')'+ ' w najpopularniejszych walutach:'"></h6>
+            <h5 class="fst-italic lh-1 mb-4" th:text="${quantity} + ' '+${myCurrency} + '(' + ${myCurrencyName} + ')'+ ' to po aktualnym kursie ' + ${amount} + ' '+ ${targetCurrency}+ '(' + ${targetCurrencyName} + ')'"></h5>
+            <h8 class="fst-italic lh-1 mb-4" th:text="'Kurs '+${myCurrency} + '(' + ${myCurrencyName} + ')'+ ' w najpopularniejszych walutach:'"></h8>
             <table class="table table-bordered table-info">
                 <thead>
-                <tr th:each="instance : ${otherRates}">
-                    <td th:text="${instance.key}">keyvalue</td>
-                    <td th:text="${instance.value.toString()}">num</td>
+                <tr th:each="i : ${otherRates}">
+                    <td th:text="${i.key}">keyvalue</td>
+                    <td th:text="${i.value}">num</td>
                 </tr>
                 </tbody>
             </table>
-            <h6 class="fst-italic lh-1 mb-4" th:text="${amount} "></h6>
+
         </div>
 
         <div style="text-align: center; margin-top: 8%" class="col-auto">
             <a href="/" class="btn btn-primary ">Przelicz inne waluty!</a>
+        </div>
+        <div style="text-align: center; margin-top: 8%" class="col-auto">
+            <a href="history" class="btn btn-primary ">Historia transakcji z ostatnich 7 dni</a>
         </div>
     </div>
 
@@ -52,8 +56,8 @@
 <!-- For more icon options, visit https://fontawesome.com/icons?d=gallery&p=2&s=brands-->
 <div class="social-icons">
     <div class="d-flex flex-row flex-lg-column justify-content-center align-items-center h-100 mt-3 mt-lg-0">
-        <a class="btn btn-light m-3" href="#!"><i class="fab fa-github"></i></a>
-        <a class="btn btn-light m-3" href="#!"><i class="fab fa-linkedin"></i></a>
+        <a class="btn btn-light m-3" href="https://github.com/zalewskig140"><i class="fab fa-github"></i></a>
+        <a class="btn btn-light m-3" href="https://www.linkedin.com/in/grzegorz-zalewski-29b70921a/"><i class="fab fa-linkedin"></i></a>
 
     </div>
 </div>
