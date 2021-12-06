@@ -1,14 +1,12 @@
-package pl.zalewskigrzegorz.exchange;
+package pl.zalewskigrzegorz.exchange.Dto;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import pl.zalewskigrzegorz.exchange.Dto.RateInfo;
 
 
-import java.util.Date;
 import java.util.List;
-import java.util.Map;
 
 @NoArgsConstructor
 @Getter

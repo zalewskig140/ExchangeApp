@@ -1,9 +1,13 @@
-package pl.zalewskigrzegorz.exchange;
+package pl.zalewskigrzegorz.exchange.Service;
 
 import lombok.Getter;
 import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import pl.zalewskigrzegorz.exchange.Dto.ExchangeOptions;
+import pl.zalewskigrzegorz.exchange.Dto.RateInfo;
+import pl.zalewskigrzegorz.exchange.Repository.TransactionRepository;
+import pl.zalewskigrzegorz.exchange.Dto.Transaction;
 
 import java.time.LocalDateTime;
 import java.util.*;

@@ -1,4 +1,4 @@
-package pl.zalewskigrzegorz.exchange;
+package pl.zalewskigrzegorz.exchange.Controller;
 
 import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,12 +7,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import pl.zalewskigrzegorz.exchange.Dto.ExchangeOptions;
+import pl.zalewskigrzegorz.exchange.Service.ExchangeRatesService;
+import pl.zalewskigrzegorz.exchange.Service.ExchangeWorkService;
+import pl.zalewskigrzegorz.exchange.Repository.TransactionRepository;
+import pl.zalewskigrzegorz.exchange.Dto.Transaction;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
-import java.util.function.Supplier;
-import java.util.stream.Collectors;
 
 @Log
 @Controller

@@ -1,7 +1,8 @@
-package pl.zalewskigrzegorz.exchange;
+package pl.zalewskigrzegorz.exchange.Repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
+import pl.zalewskigrzegorz.exchange.Dto.Transaction;
 
 import javax.transaction.Transactional;
 import java.time.LocalDateTime;

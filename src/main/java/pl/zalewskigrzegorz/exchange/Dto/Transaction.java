@@ -1,4 +1,4 @@
-package pl.zalewskigrzegorz.exchange;
+package pl.zalewskigrzegorz.exchange.Dto;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

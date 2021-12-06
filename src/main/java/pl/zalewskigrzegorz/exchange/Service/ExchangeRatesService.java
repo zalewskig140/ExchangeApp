@@ -1,8 +1,10 @@
-package pl.zalewskigrzegorz.exchange;
+package pl.zalewskigrzegorz.exchange.Service;
 
 import lombok.extern.java.Log;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+import pl.zalewskigrzegorz.exchange.Dto.RateInfo;
+import pl.zalewskigrzegorz.exchange.Dto.TableInfo;
 
 import java.util.*;
 import java.util.stream.Collectors;
